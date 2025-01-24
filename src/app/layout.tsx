@@ -49,16 +49,16 @@ export default function RootLayout({
             />
             <Link  href="/" className="text-lg font-bold">
               Home
-            </a>
+            </Link>
             <Link  href="/shop" className="text-lg font-bold">
               Products
-            </a>
+            </Link>
             <Link  href="/" className="text-lg font-bold">
               Blogs
-            </a>
+            </Link>
             <Link  href="/contact" className="text-lg font-bold">
               Contact
-            </a>
+            </Link>
             <div className="w-72 flex">
 
               <input
