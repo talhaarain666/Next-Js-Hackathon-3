@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Logo from "../../public/images/Hekto.png";
 import "./globals.css";
-
+import Image from "next/image";
+import { Box, Search, ShoppingCart } from "lucide-react";
+import { Toaster } from "@/components/ui/toaster";
+import Footer from "../components/Footer";
+import BottomFooter from "../components/BottomFooter";
+import TopHeader from "../components/TopHeader";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -28,7 +34,53 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* {children} */}
+        <TopHeader />
+
+
+
+        <header className="py-4">
+          <nav className="container mx-auto flex justify-between items-center">
+            <Image
+              src={Logo} // Replace with your logo file path
+              alt="Logo"
+              className="mr-2"
+            />
+            <a href="/" className="text-lg font-bold">
+              Home
+            </a>
+            <a href="/shop" className="text-lg font-bold">
+              Products
+            </a>
+            <a href="/" className="text-lg font-bold">
+              Blogs
+            </a>
+            <a href="/contact" className="text-lg font-bold">
+              Contact
+            </a>
+            <div className="w-72 flex">
+
+              <input
+                type="text"
+                placeholder="Search"
+                className="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
+              />
+              <button
+                type="button"
+                className="bg-pink-500 p-2 flex items-center justify-center hover:bg-pink-600"
+              >
+                <Search className="text-white w-5 h-5" />
+              </button>
+            </div>
+
+
+          </nav>
+        </header>
+        <main>{children}</main>
+        <Toaster />
+        <Footer />
+        <BottomFooter />
+
       </body>
     </html>
   );

@@ -1,101 +1,166 @@
 import Image from "next/image";
+import BG from "../../public/images/promotion bg.png"
+import Sofa from "../../public/images/sofa promotional header.png"
+import Sofa2 from "../../public/images/Group 153.png"
+import Light from "../../public/images/image 32.png"
+import NewsLetterBg from "../../public/images/Rectangle 102.png"
+import SofaBg from "../../public/images/Rectangle 101.png"
+import TopCt1 from "../../public/images/Top Catagories/image 20.png"
+import TopCt2 from "../../public/images/Top Catagories/image 1168.png"
+import TopCt3 from "../../public/images/Top Catagories/image 1171.png"
+import TopCTCard from "../components/TopCTCard"
+import TrendProdCard from "../components/TrendProdCard"
+import Link from "next/link";
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <div>
+        <div className="relative w-full h-auto">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Image
+            src={BG}
+            alt="Promotion"
+            className="object-cover w-full h-full"
+          />
+
+          {/* Text and Button Container */}
+          <div className="absolute top-0 left-0">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={Light}
+              alt="Overlay Image"
+            // width={100}
+            // height={100}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+
+          <div className="absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/2 space-y-6  md:w-1/3">
+            <div className="text-xl mb-2">Best Furniture For Your Castle....</div>
+            <div className="text-5xl font-bold mb-2">
+              New Furniture Collection
+              <br />
+              Trends in 2020
+            </div>
+            <div className="text-xl mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing
+              in phasellus non in justo.
+            </div>
+            <Link href="/shop">
+              <button className="bg-[#FB2E86] text-white text-base py-2 px-8 hover:bg-pink-400 transition-colors duration-200">
+                Shop Now
+              </button>
+            </Link>
+          </div>
+
+          {/* Sofa Image */}
+          <div className="absolute top-1/2 right-32 transform -translate-y-1/2">
+            <Image
+              src={Sofa}
+              alt="Overlay Image"
+            // width={100}
+            // height={100}
+            />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+
+        {/* Top Categories */}
+        <section className="py-12 my-4">
+
+          <h1 className="text-4xl font-bold text-center mb-8">Top Categories</h1>
+          <div className="grid grid-cols-4 grid-rows-1 px-64 gap-8">
+            <TopCTCard img={TopCt1} />
+            <TopCTCard img={TopCt2} />
+            <TopCTCard img={TopCt3} />
+            <TopCTCard img={TopCt1} />
+
+
+
+          </div>
+
+        </section>
+
+
+
+        <section className="py-12 my-4 relative">
+          <div className="absolute inset-0 w-full h-full">
+            <Image
+              src={SofaBg}
+              alt="Promotion"
+              className="object-cover w-full h-full"
+            />
+          </div>
+
+          <div className="relative flex items-center justify-center w-full max-w-6xl mx-auto px-4">
+            <div className="flex items-center justify-between w-full">
+              <div className="relative">
+                <Image
+                  src={Sofa2}
+                  alt="Promotion"
+                  className="object-contain"
+                />
+              </div>
+
+              <div>
+                <div className="text-4xl font-bold mb-4">
+                  Unique Features Of Latest &<br />
+                  Trending Products
+                </div>
+
+                <button className="bg-[#FB2E86] text-white text-base py-2 px-8 hover:bg-pink-400 transition-colors duration-200">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* Trending Products */}
+        <section className="py-12 my-4">
+
+          <h1 className="text-4xl font-bold text-center mb-8">Trending Products</h1>
+          <div className="grid grid-cols-4 grid-rows-1 px-64 gap-8">
+            <TrendProdCard img={TopCt1} />
+            <TrendProdCard img={TopCt1} />
+            <TrendProdCard img={TopCt1} />
+            <TrendProdCard img={TopCt1} />
+
+          </div>
+        </section>
+
+
+
+        <section className="py-12 my-4">
+
+          <div className="relative w-full h-auto">
+
+            <Image
+              src={NewsLetterBg}
+              alt="Promotion"
+              className="object-cover w-full h-full"
+            />
+
+
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+
+              <div className="text-4xl font-bold mb-4">
+                Get Leatest Update By Subscribe
+                <br />
+                0ur Newslater
+              </div>
+
+              <button className="bg-[#FB2E86] text-white text-base py-2 px-8 hover:bg-pink-400 transition-colors duration-200">
+                Shop Now
+              </button>
+            </div>
+
+
+          </div>
+
+        </section>
+      </div>
+    </>
   );
 }
