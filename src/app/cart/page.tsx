@@ -30,8 +30,8 @@ export default function ShoppingCart() {
         setCart(getCart());
     };
 
-    const calculateTotal = () =>
-        cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    // const calculateTotal = () =>
+    //     cart.reduce((total, item) => total + item.price * item.quantity, 0);
     const subtotal = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
     const total = subtotal + 10; // Assuming $10 shipping charge
 

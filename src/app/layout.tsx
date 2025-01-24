@@ -8,6 +8,7 @@ import BottomFooter from "../components/BottomFooter";
 import Footer from "../components/Footer";
 import TopHeader from "../components/TopHeader";
 import "./globals.css";
+import Link from "next/link";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -46,16 +47,16 @@ export default function RootLayout({
               alt="Logo"
               className="mr-2"
             />
-            <a href="/" className="text-lg font-bold">
+            <Link  href="/" className="text-lg font-bold">
               Home
             </a>
-            <a href="/shop" className="text-lg font-bold">
+            <Link  href="/shop" className="text-lg font-bold">
               Products
             </a>
-            <a href="/" className="text-lg font-bold">
+            <Link  href="/" className="text-lg font-bold">
               Blogs
             </a>
-            <a href="/contact" className="text-lg font-bold">
+            <Link  href="/contact" className="text-lg font-bold">
               Contact
             </a>
             <div className="w-72 flex">
