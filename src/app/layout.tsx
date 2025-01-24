@@ -1,13 +1,13 @@
+import { Toaster } from "@/components/ui/toaster";
+import { Search } from "lucide-react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Logo from "../../public/images/Hekto.png";
-import "./globals.css";
 import Image from "next/image";
-import { Box, Search, ShoppingCart } from "lucide-react";
-import { Toaster } from "@/components/ui/toaster";
-import Footer from "../components/Footer";
+import Logo from "../../public/images/Hekto.png";
 import BottomFooter from "../components/BottomFooter";
+import Footer from "../components/Footer";
 import TopHeader from "../components/TopHeader";
+import "./globals.css";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",

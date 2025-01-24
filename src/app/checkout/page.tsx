@@ -1,5 +1,5 @@
 "use client"
-import { useState, ChangeEvent, FormEvent } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
 interface FormData {
   email: string;

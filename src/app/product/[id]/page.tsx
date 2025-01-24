@@ -2,10 +2,8 @@
 
 import Header from '@/components/Header';
 import { useToast } from '@/hooks/use-toast';
-import { urlFor } from '@/sanity/lib/image';
-import { addToCart } from '@/utils/cart';
 import Image from 'next/image';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 
 export default function ProductDetails() {
     const searchParams = useSearchParams();

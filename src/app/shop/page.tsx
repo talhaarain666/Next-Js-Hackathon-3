@@ -1,12 +1,9 @@
 "use client"
-import GridShopCard from "../../components/GridShopCard"
-import ListShopCard from "../../components/ListShopCard"
-import Header from "../../components/Header"
-import Img1 from "../../../public/images/Shop/image 9.png"
-import Img1List from "../../../public/images/img 1 list.jpg"
-import { useEffect, useState } from "react"
 import { client } from "@/sanity/lib/client"
 import Link from "next/link"
+import { useEffect, useState } from "react"
+import GridShopCard from "../../components/GridShopCard"
+import Header from "../../components/Header"
 export default function Shop() {
     interface Product {
         _id: string;

@@ -2,7 +2,6 @@
 
 import Header from '@/components/Header';
 import { getCart, removeFromCart, updateQuantity } from '@/utils/cart';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
